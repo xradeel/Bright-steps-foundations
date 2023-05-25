@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+
+
+{% block title%}Partners{% endblock title%}
+{% block body%}
+<div class="just_pad"></div>
+
+<div class="container">
+  <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="/static/img/icons8-help-72.png" alt="" width="72" height="72">
+          <h2>Ask for help?</h2>
+          <p class="lead">Fill out the form to receive donations.</p>
+        </div>
+</div>
+  <form method="post", action="{% url 'donationTaker'%}">
+    {% csrf_token%}
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="" name="fullname" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="lastName">University/ Institute Name:</label>
+        <input type="text" class="form-control" id="lastName" placeholder="" name="uniName" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="email">Email: </label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="phone">Phone #: <span class="text-muted">(Optional)</span></label>
+        <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+92 300 0000000">
+      </div>
+    </div>
+      <div>
+        <div class="mb-3">
+          <label for="address">Street Address </label>
+          <input type="text" class="form-control" id="address" name="address" placeholder="Street Address">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" name="city" placeholder="Your city name">
+        </div>
+         <div class="col-md-6 mb-3">
+          <label for="state">State</label>
+          <select class="custom-select d-block w-100 form-control form-control-lg" name="state" id="state" required>
+            <option value="">Choose...</option>
+            <option value="punjab">Punjab</option>
+            <option value="sindh">Sindh</option>
+            <option value="kpk">KPK</option>
+            <option value="balochistan">Balochistan</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="requirement">You are looking for : </label>
+            <select class="custom-select d-block w-100 form-control form-control-lg" name="requirement"  id="requirement" required>
+            <option value="st_books">Student's books</option>
+            <option value="st_library">Student's library</option>
+            <option value="stationary">Stationary</option>
+            <option value="fee">Fee</option>
+            <option value="uniform">Uniforms</option>
+            <option value="expenditures">Expenditures</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="details_req">Detail of your requirement:</label>
+        <textarea class="form-control" id="details_req" name="detailReq"  rows="4" placeholder="Write details of your requirement here..."></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="why">Why do you think you are capable of donation?</label>
+        <textarea class="form-control" id="why" rows="4" name="capability" placeholder="Write your answer here..."></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="anythinelse">Anything else you want donor know about you:</label>
+        <textarea class="form-control" id="anythinelse" rows="4" name="anythinelse" placeholder="Write your answer here..."></textarea>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary cus_btn">Donate</button>
+      </div>
+    </div>
+  </form>
+
+
+{% endblock body%}

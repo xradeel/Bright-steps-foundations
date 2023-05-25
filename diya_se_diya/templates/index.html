@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+
+
+{% block title%}Home{% endblock title%}
+{% block body%}
+<div class="">
+  <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active cheight_img">
+      <a href="/donation">
+        <img src="/static/img/taleem.jpg" class="d-block cheight_img w-100" alt="...">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item cheight_img">
+      <img src="/static/img/main_img.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item cheight_img">
+      <img src="/static/img/OrphanBanner1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="tag_sec text-center">
+  <div class="container">
+    <h3>Empowering Children through Education. Fostering Social Impact.</h3>
+    <p>Bright Steps Foundation (BSF) is a non-profit educational organization committed to responding to the educational needs of the most disenfranchised and neglected members of civil society. We foster social impact through educating, inspiring, and empowering children and youth to overcome poverty and reach their full potential.</p>
+    <div class="about_btn">
+      <a href="/about" class="btn "> About Us  <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="card-deck my-4">
+    <div class="card " style="width: 18rem;">
+      <img src="/static/img/main_img.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Educating</h5>
+        <p class="card-text">In Pakistan, nearly a million school-age deaf children lack access to education or language development.</p>
+<!--        <a href="/donation" class="btn donate_btn">Donate Now</a>-->
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="/static/img/main_img.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Inspiring</h5>
+        <p class="card-text">Working together with our partners, donors, and volunteers, we inspire lasting change and hope.</p>
+<!--        <a href="/donation" class="btn donate_btn">Donate Now</a>-->
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="/static/img/main_img.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Empowering</h5>
+        <p class="card-text">Every child deserves a quality education, language and social development, and a future of opportunity.</p>
+<!--        <a href="/donation" class="btn donate_btn">Donate Now</a>-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="tag_sec text-center">
+  <div class="container">
+    <p class="quote_icon"><i class="fa-solid fa-quote-left"></i></p>
+    <h3>Bright Steps Foundation</h3>
+    <p>Singular inputs alone will not do the job – not in the time available, not across the wide spectrum of needs. But if we can work simultaneously and synergistically on several fronts, then progress in one area will spur progress in other areas. The whole can be greater than the sum of its parts. </p>
+  </div>
+</div>
+
+
+{% endblock body%}
